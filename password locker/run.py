@@ -34,8 +34,46 @@ def main():
 
             while entered_username != new_username  or entered_passsword != new_password:
                 print("Invalid username or password!Try again")
+                print("Enter username")
+                entered_username = input()
+                print ("Enter your password")
+                entered_passsword = input()
+            else:
+                print (f"{entered_username} welcome to your account")
+                print("\n")
+                #Add code to save user password here
+        
+        elif short_code == "login":
+            print("Enter username")
+            saved_username = input()
+            #testcode for login...replce with accountlist loop
+            while saved_username != "andy":
+                print("Username does not exist. Create an account first")
 
-        break
+            else:
+                print("Enter Password")
+                saved_password = input()
+
+                while saved_password != "1234":
+                    print("""Wrong Password!
+                    Please try again""")
+                    saved_password = input()
+
+                else:
+                    print("Congratulations! You have succesfully logged in")
+
+           
+
+            # while entered_username != new_username  or entered_passsword != new_password:
+            #     print("Invalid username or password!Try again")
+            #     print("Enter username")
+            #     saved_username = input()
+            #     print ("Enter your password")
+            #     entered_passsword = input()
+        elif short_code =="exit":
+            break
+        else:
+            print("Enter a valid shortcode!")
 
 
 if __name__ == "__main__":
