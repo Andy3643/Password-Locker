@@ -1,5 +1,6 @@
 from venv import create
 from account import account
+from credentials import credentials
 
 def main():
     while True:
@@ -49,6 +50,7 @@ def main():
             #testcode for login...replce with accountlist loop
             while saved_username != "andy":
                 print("Username does not exist. Create an account first")
+                break
 
             else:
                 print("Enter Password")
@@ -61,15 +63,23 @@ def main():
 
                 else:
                     print("Congratulations! You have succesfully logged in")
+                    print ("""You can now save your passwords here.
+                    to create add a username and password use the code save""")
 
-           
+                #save password
+                    if short_code == 'save':
+                            print("Add username")
+                            username_to_save = input()
+                            print ("Print password")
+                            password_to_save = input()
 
-            # while entered_username != new_username  or entered_passsword != new_password:
-            #     print("Invalid username or password!Try again")
-            #     print("Enter username")
-            #     saved_username = input()
-            #     print ("Enter your password")
-            #     entered_passsword = input()
+                            # save_credentials(create_credentials(username,password))
+                            # print ('\n')
+                            # print(f"New details for  {username_to_save}created")
+                            # print ('\n')
+
+
+                    
         elif short_code =="exit":
             break
         else:
